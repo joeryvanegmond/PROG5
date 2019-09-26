@@ -1,0 +1,29 @@
+C:\Users\Linksonder\Documents\1. GitHub\Prog5.XAML\XAMLDemo.uitwerking\bin\Debug\XAMLDemo.exe.config
+C:\Users\Linksonder\Documents\1. GitHub\Prog5.XAML\XAMLDemo.uitwerking\bin\Debug\XAMLDemo.exe
+C:\Users\Linksonder\Documents\1. GitHub\Prog5.XAML\XAMLDemo.uitwerking\bin\Debug\XAMLDemo.pdb
+C:\Users\Linksonder\Documents\1. GitHub\Prog5.XAML\XAMLDemo.uitwerking\obj\Debug\XAMLDemo.uitwerking.csprojResolveAssemblyReference.cache
+C:\Users\Linksonder\Documents\1. GitHub\Prog5.XAML\XAMLDemo.uitwerking\obj\Debug\MainWindow.baml
+C:\Users\Linksonder\Documents\1. GitHub\Prog5.XAML\XAMLDemo.uitwerking\obj\Debug\App.baml
+C:\Users\Linksonder\Documents\1. GitHub\Prog5.XAML\XAMLDemo.uitwerking\obj\Debug\MainWindow.g.cs
+C:\Users\Linksonder\Documents\1. GitHub\Prog5.XAML\XAMLDemo.uitwerking\obj\Debug\App.g.cs
+C:\Users\Linksonder\Documents\1. GitHub\Prog5.XAML\XAMLDemo.uitwerking\obj\Debug\XAMLDemo_MarkupCompile.cache
+C:\Users\Linksonder\Documents\1. GitHub\Prog5.XAML\XAMLDemo.uitwerking\obj\Debug\XAMLDemo.g.resources
+C:\Users\Linksonder\Documents\1. GitHub\Prog5.XAML\XAMLDemo.uitwerking\obj\Debug\XAMLDemo.Properties.Resources.resources
+C:\Users\Linksonder\Documents\1. GitHub\Prog5.XAML\XAMLDemo.uitwerking\obj\Debug\XAMLDemo.uitwerking.csproj.GenerateResource.Cache
+C:\Users\Linksonder\Documents\1. GitHub\Prog5.XAML\XAMLDemo.uitwerking\obj\Debug\XAMLDemo.exe
+C:\Users\Linksonder\Documents\1. GitHub\Prog5.XAML\XAMLDemo.uitwerking\obj\Debug\XAMLDemo.pdb
+\\Mac\Home\Documents\Avans\leerjaar 2\BLOK 5\PROG5\week 3\Prog5.XAML-master\XAMLDemo.uitwerking\bin\Debug\XAMLDemo.exe.config
+\\Mac\Home\Documents\Avans\leerjaar 2\BLOK 5\PROG5\week 3\Prog5.XAML-master\XAMLDemo.uitwerking\bin\Debug\XAMLDemo.exe
+\\Mac\Home\Documents\Avans\leerjaar 2\BLOK 5\PROG5\week 3\Prog5.XAML-master\XAMLDemo.uitwerking\bin\Debug\XAMLDemo.pdb
+\\Mac\Home\Documents\Avans\leerjaar 2\BLOK 5\PROG5\week 3\Prog5.XAML-master\XAMLDemo.uitwerking\obj\Debug\XAMLDemo.uitwerking.csprojAssemblyReference.cache
+\\Mac\Home\Documents\Avans\leerjaar 2\BLOK 5\PROG5\week 3\Prog5.XAML-master\XAMLDemo.uitwerking\obj\Debug\MainWindow.baml
+\\Mac\Home\Documents\Avans\leerjaar 2\BLOK 5\PROG5\week 3\Prog5.XAML-master\XAMLDemo.uitwerking\obj\Debug\App.baml
+\\Mac\Home\Documents\Avans\leerjaar 2\BLOK 5\PROG5\week 3\Prog5.XAML-master\XAMLDemo.uitwerking\obj\Debug\MainWindow.g.cs
+\\Mac\Home\Documents\Avans\leerjaar 2\BLOK 5\PROG5\week 3\Prog5.XAML-master\XAMLDemo.uitwerking\obj\Debug\App.g.cs
+\\Mac\Home\Documents\Avans\leerjaar 2\BLOK 5\PROG5\week 3\Prog5.XAML-master\XAMLDemo.uitwerking\obj\Debug\XAMLDemo_MarkupCompile.cache
+\\Mac\Home\Documents\Avans\leerjaar 2\BLOK 5\PROG5\week 3\Prog5.XAML-master\XAMLDemo.uitwerking\obj\Debug\XAMLDemo.g.resources
+\\Mac\Home\Documents\Avans\leerjaar 2\BLOK 5\PROG5\week 3\Prog5.XAML-master\XAMLDemo.uitwerking\obj\Debug\XAMLDemo.Properties.Resources.resources
+\\Mac\Home\Documents\Avans\leerjaar 2\BLOK 5\PROG5\week 3\Prog5.XAML-master\XAMLDemo.uitwerking\obj\Debug\XAMLDemo.uitwerking.csproj.GenerateResource.cache
+\\Mac\Home\Documents\Avans\leerjaar 2\BLOK 5\PROG5\week 3\Prog5.XAML-master\XAMLDemo.uitwerking\obj\Debug\XAMLDemo.uitwerking.csproj.CoreCompileInputs.cache
+\\Mac\Home\Documents\Avans\leerjaar 2\BLOK 5\PROG5\week 3\Prog5.XAML-master\XAMLDemo.uitwerking\obj\Debug\XAMLDemo.exe
+\\Mac\Home\Documents\Avans\leerjaar 2\BLOK 5\PROG5\week 3\Prog5.XAML-master\XAMLDemo.uitwerking\obj\Debug\XAMLDemo.pdb

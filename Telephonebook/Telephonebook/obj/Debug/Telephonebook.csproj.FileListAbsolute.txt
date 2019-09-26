@@ -1,0 +1,7 @@
+\\Mac\Home\Documents\Avans\leerjaar 2\BLOK 5\PROG5\week 2\Telephonebook\Telephonebook\bin\Debug\Telephonebook.exe.config
+\\Mac\Home\Documents\Avans\leerjaar 2\BLOK 5\PROG5\week 2\Telephonebook\Telephonebook\bin\Debug\Telephonebook.exe
+\\Mac\Home\Documents\Avans\leerjaar 2\BLOK 5\PROG5\week 2\Telephonebook\Telephonebook\bin\Debug\Telephonebook.pdb
+\\Mac\Home\Documents\Avans\leerjaar 2\BLOK 5\PROG5\week 2\Telephonebook\Telephonebook\obj\Debug\Telephonebook.csprojAssemblyReference.cache
+\\Mac\Home\Documents\Avans\leerjaar 2\BLOK 5\PROG5\week 2\Telephonebook\Telephonebook\obj\Debug\Telephonebook.csproj.CoreCompileInputs.cache
+\\Mac\Home\Documents\Avans\leerjaar 2\BLOK 5\PROG5\week 2\Telephonebook\Telephonebook\obj\Debug\Telephonebook.exe
+\\Mac\Home\Documents\Avans\leerjaar 2\BLOK 5\PROG5\week 2\Telephonebook\Telephonebook\obj\Debug\Telephonebook.pdb

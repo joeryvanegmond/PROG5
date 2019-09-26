@@ -1,0 +1,11 @@
+﻿<Application x:Class="Prog5.HW.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Prog5.HW"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <FontWeight x:Key="HeavyTitle" >Heavy</FontWeight>
+        <SolidColorBrush x:Key="MainTextColor" Color="Black"></SolidColorBrush>
+    </Application.Resources>
+
+</Application>

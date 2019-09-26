@@ -1,0 +1,18 @@
+﻿<Window x:Class="Prog5.Inventory.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Prog5.Inventory"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525"
+        DataContext="{Binding Main, Source= {StaticResource Locator} }">
+    <StackPanel>
+        <WrapPanel>
+            <Button Margin="5" Padding="10" Background="#FF3C8FCA" Foreground="White" Command="{Binding OpenShopCommand}">Open shop</Button>
+        </WrapPanel>
+        <DataGrid ItemsSource="{Binding Inventory}">
+
+        </DataGrid>
+    </StackPanel>
+</Window>
