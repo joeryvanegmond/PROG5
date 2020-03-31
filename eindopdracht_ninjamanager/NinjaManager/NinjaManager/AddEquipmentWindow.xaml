@@ -1,0 +1,27 @@
+﻿<Window x:Class="NinjaManager.AddEquipmentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NinjaManager"
+        mc:Ignorable="d"
+        Title="AddEquipmentWindow" Height="450" Width="400"
+        Name="AddEquipment"
+        DataContext="{Binding AddEquipment, Source={StaticResource Locator}}">
+    <StackPanel>
+        <Label>Name</Label>
+        <TextBox Text="{Binding EquipmentName, Mode=TwoWay}"/>
+        <Label>Gold</Label>
+        <TextBox Text="{Binding EquipmentGold, Mode=TwoWay}"/>
+        <Label>Category</Label>
+        <ComboBox  ItemsSource="{Binding CatagoryNames, Mode=OneWay}" SelectedValue="{Binding EquipmentCatagory}" SelectedIndex="0"/>
+        <Label>Strength</Label>
+        <TextBox Text="{Binding EquipmentStrength, Mode=TwoWay}"/>
+        <Label>Intelligence</Label>
+        <TextBox Text="{Binding EquipmentIntelligence, Mode=TwoWay}"/>
+        <Label>Agility</Label>
+        <TextBox Text="{Binding EquipmentAgillity, Mode=TwoWay}"/>
+        <Button Command="{Binding SaveEquipmentCommand}" CommandParameter="{Binding ElementName=AddEquipment}">Save</Button>
+        <TextBlock Text="{Binding ErrorMessage, Mode=TwoWay}" Foreground="Red"></TextBlock>
+    </StackPanel>
+</Window>

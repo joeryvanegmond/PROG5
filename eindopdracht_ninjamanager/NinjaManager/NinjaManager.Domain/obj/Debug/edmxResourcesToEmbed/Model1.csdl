@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NinjaManagerModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="C__RefactorLog">
+    <Key>
+      <PropertyRef Name="OperationKey" />
+    </Key>
+    <Property Name="OperationKey" Type="Guid" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="Category1" />
+    </Key>
+    <Property Name="Category1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Equipment" Relationship="Self.FK_Equipment_ToCategory" FromRole="Category" ToRole="Equipment" />
+  </EntityType>
+  <EntityType Name="Equipment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Gold" Type="Int32" Nullable="false" />
+    <Property Name="Strength" Type="Int32" Nullable="false" />
+    <Property Name="Agility" Type="Int32" Nullable="false" />
+    <Property Name="Intelligence" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Category1" Relationship="Self.FK_Equipment_ToCategory" FromRole="Equipment" ToRole="Category" />
+    <NavigationProperty Name="Ninja" Relationship="Self.Inventory" FromRole="Equipment" ToRole="Ninja" />
+  </EntityType>
+  <EntityType Name="Ninja">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Gold" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Equipment" Relationship="Self.Inventory" FromRole="Ninja" ToRole="Equipment" />
+  </EntityType>
+  <Association Name="FK_Equipment_ToCategory">
+    <End Role="Category" Type="Self.Category" Multiplicity="1" />
+    <End Role="Equipment" Type="Self.Equipment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="Category1" />
+      </Principal>
+      <Dependent Role="Equipment">
+        <PropertyRef Name="Category" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Inventory">
+    <End Role="Equipment" Type="Self.Equipment" Multiplicity="*" />
+    <End Role="Ninja" Type="Self.Ninja" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="NinjaManagerEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="C__RefactorLog" EntityType="Self.C__RefactorLog" />
+    <EntitySet Name="Category" EntityType="Self.Category" />
+    <EntitySet Name="Equipment" EntityType="Self.Equipment" />
+    <EntitySet Name="Ninja" EntityType="Self.Ninja" />
+    <AssociationSet Name="FK_Equipment_ToCategory" Association="Self.FK_Equipment_ToCategory">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="Equipment" EntitySet="Equipment" />
+    </AssociationSet>
+    <AssociationSet Name="Inventory" Association="Self.Inventory">
+      <End Role="Equipment" EntitySet="Equipment" />
+      <End Role="Ninja" EntitySet="Ninja" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

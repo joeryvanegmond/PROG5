@@ -1,0 +1,38 @@
+﻿<Window x:Class="NinjaManager.EditNinjaWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NinjaManager"
+        mc:Ignorable="d"
+        Title="EditNinjaWindow" Height="220" Width="310"
+        Name="EditNinja"
+         DataContext="{Binding EditNinja, Source={StaticResource Locator}}">
+
+    <Grid Margin="10">
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0">
+
+            <TextBlock Text="Edit Ninja" FontSize="28" />
+            <TextBlock Text="Name:" Margin="0,5,0,0"  />
+            <TextBox Text="{Binding NinjaName, Mode=TwoWay}" />
+
+            <TextBlock Text="Gold:" Margin="0,5,0,0"  />
+            <TextBox Text="{Binding NinjaGold, Mode=TwoWay}" />
+        </StackPanel>
+        
+        <StackPanel Grid.Row="1">
+            <Button Command="{Binding SaveNinjaCommand}"  CommandParameter="{Binding ElementName=EditNinja}">Save</Button>
+        </StackPanel>
+        
+        <StackPanel Grid.Row="2">
+            <TextBlock Text="{Binding ErrorMessage, Mode=TwoWay}" Foreground="Red"></TextBlock>
+        </StackPanel>
+    </Grid>
+</Window>

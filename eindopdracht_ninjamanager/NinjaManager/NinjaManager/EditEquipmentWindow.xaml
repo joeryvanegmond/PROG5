@@ -1,0 +1,29 @@
+﻿<Window x:Class="NinjaManager.EditEquipmentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NinjaManager"
+        mc:Ignorable="d"
+        Title="EditEquipmentWindow" Height="450" Width="800"
+        Name="EditEquipment"
+        DataContext="{Binding EditEquipment, Source={StaticResource Locator}}">
+    <Grid>
+        <StackPanel>
+            <Label>Name</Label>
+            <TextBox Text="{Binding EquipmentName}"/>
+            <Label>Gold</Label>
+            <TextBox Text="{Binding EquipmentGold}"/>
+            <Label>Category</Label>
+            <ComboBox ItemsSource="{Binding CatagoryNames, Mode=OneWay}" SelectedValue="{Binding EquipmentCatagory}" IsEnabled="False"/>
+            <Label>Strength</Label>
+            <TextBox Text="{Binding EquipmentStrength}"/>
+            <Label>Intelligence</Label>
+            <TextBox Text="{Binding EquipmentIntelligence}"/>
+            <Label>Agility</Label>
+            <TextBox Text="{Binding EquipmentAgillity}"/>
+            <Button Command="{Binding SaveEquipmentCommand}" CommandParameter="{Binding ElementName=EditEquipment}">Save</Button>
+            <TextBlock Text="{Binding ErrorMessage, Mode=TwoWay}" Foreground="Red"></TextBlock>
+        </StackPanel>
+    </Grid>
+</Window>

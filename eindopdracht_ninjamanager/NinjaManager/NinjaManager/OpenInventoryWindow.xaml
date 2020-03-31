@@ -1,0 +1,269 @@
+﻿<Window x:Class="NinjaManager.OpenInventoryWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NinjaManager"
+        xmlns:Style="http://schemas.microsoft.com/netfx/2009/xaml/presentation"
+        mc:Ignorable="d"
+        Title="InventoryWindow" Height="600" Width="800"
+        Name="Inventory"
+        DataContext="{Binding NinjaInventory, Source={StaticResource Locator}}">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+
+
+        <StackPanel Grid.Column="0" Grid.Row="0">
+            <TextBlock FontSize="24" Text="{Binding SelectedNinja.Name}"></TextBlock>
+        </StackPanel>
+
+        <Grid Grid.Column="1" Grid.Row="0">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="0" FontSize="24">Gold: <TextBlock FontSize="24" Text="{Binding Gold}"></TextBlock> </TextBlock>
+            <TextBlock Grid.Column="1" Text="{Binding ErrorMessage}" Foreground="Red" FontWeight="Bold"></TextBlock>
+        </Grid>
+
+        <!--NINJA AFBEELDING-->
+        <Grid Grid.Column="0" Grid.Row="1">
+            <Border BorderBrush="Black" BorderThickness="15">
+                <Style:StackPanel>
+                    <StackPanel.Background>
+                        <ImageBrush ImageSource="https://images-na.ssl-images-amazon.com/images/I/5106pO9TTUL._UX679_.jpg"  Stretch="Uniform"/>
+                    </StackPanel.Background>
+                </Style:StackPanel>
+            </Border>
+        </Grid>
+
+          <Grid Grid.Column="1" Grid.Row="1">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="70"/>
+            </Grid.RowDefinitions>
+
+            <DataGrid AutoGenerateColumns="False" IsReadOnly="True" SelectedItem="{Binding SelectedEquipment}" ItemsSource="{Binding EquipmentCollection}" Margin="0,6,0,0" BorderBrush="#FF979494" GridLinesVisibility="Horizontal" HorizontalGridLinesBrush="#FFF0E0E0" HeadersVisibility="Column">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Category" Binding="{Binding Category}" Foreground="#FF1D1616" Width="*"/>
+                    <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="*" />
+                    <DataGridTextColumn Header="Gold" Binding="{Binding Gold}" Width="*" />
+                    
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <Grid Grid.Row="1" Grid.Column="1" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="175" />
+                    <ColumnDefinition Width="100" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="100" />
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Row="1" Grid.Column="0">
+                    <TextBlock>Waarde: <TextBlock Text="{Binding EquipmentValue, Mode=TwoWay}"></TextBlock> </TextBlock>
+                    <TextBlock>Totale strength: <TextBlock Text="{Binding StrengthValue, Mode=TwoWay}"></TextBlock> </TextBlock>
+                    <TextBlock>Totale intelligence: <TextBlock Text="{Binding IntelligenceValue, Mode=TwoWay}"></TextBlock> </TextBlock>
+                    <TextBlock>Totale agility: <TextBlock Text="{Binding AgilityValue, Mode=TwoWay}"></TextBlock> </TextBlock>
+
+
+                </StackPanel>
+                
+                <Button Command="{Binding EmptyInventoryCommand}" CommandParameter="{Binding ElementName=Inventory}" Grid.Column="1" Background="DarkRed" FontSize="20" FontWeight="Bold" Foreground="White" >Legen</Button>
+                <Button Command="{Binding OpenShopCommand}" Grid.Column="3" Background="DarkRed" FontSize="20" FontWeight="Bold" Foreground="White" >Shop</Button>
+                
+            </Grid>
+              
+              
+        </Grid>
+        
+        
+    </Grid>
+    
+    
+    <!--<Window.Resources>
+
+        <Style x:Key="TextBlockHead" TargetType="{x:Type Style:TextBlock}">
+            <Setter Property="TextBlock.FontSize" Value="20"></Setter>
+            <Setter Property="TextBlock.FontWeight" Value="Bold"></Setter>
+            <Setter Property="TextBlock.Foreground" Value="Black"></Setter>
+        </Style>
+
+        <Style x:Key="TextBlockText" BasedOn="{StaticResource TextBlockHead}" TargetType="{x:Type Style:TextBlock}">
+            <Setter Property="TextBlock.FontSize" Value="16"></Setter>
+            <Setter Property="TextBlock.FontWeight" Value="Normal"></Setter>
+        </Style>
+    </Window.Resources>
+
+    <StackPanel>
+
+        
+    --><!--Header--><!--
+    
+        <Grid Height="50">
+            <TextBlock Style="{StaticResource TextBlockHead}" TextAlignment="Center" VerticalAlignment="Center"  FontSize="20" FontWeight="Bold" Foreground="Black">Inventory</TextBlock>
+
+        </Grid>
+
+        
+    --><!--Ninja met shit--><!--
+    
+        <Border BorderBrush="Black" BorderThickness="0">
+            <Grid Height="500">
+                <Grid.Background>
+                    <ImageBrush ImageSource="https://images-na.ssl-images-amazon.com/images/I/5106pO9TTUL._UX679_.jpg"  Stretch="Uniform"/>
+                </Grid.Background>
+
+
+                
+    --><!--NINJA--><!--
+    
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="23*" />
+                    <ColumnDefinition Width="96" />
+                    <ColumnDefinition Width="88" />
+                    <ColumnDefinition Width="122" />
+                    <ColumnDefinition Width="45*" />
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="75"/>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+
+                </Grid.RowDefinitions>
+
+                --><!--<StackPanel  Grid.Column="1" Grid.Row="0">
+                    <StackPanel.Background>
+                        <SolidColorBrush Color="Gray" Opacity="0.8"></SolidColorBrush>
+                    </StackPanel.Background>
+                    <TextBlock Style="{StaticResource TextBlockHead}" >HEAD</TextBlock>
+                    <TextBlock Style="{StaticResource TextBlockText}" Text="{Binding Head.Name}"></TextBlock>
+                </StackPanel>--><!--
+
+
+                <StackPanel  Grid.Column="3" Grid.Row="2" Margin="0,0,0,30">
+                    <StackPanel.Background>
+                        <SolidColorBrush Color="Gray" Opacity="0.8"></SolidColorBrush>
+                    </StackPanel.Background>
+                    <TextBlock Style="{StaticResource TextBlockHead}" >SHOULDERS</TextBlock>
+                    <TextBlock Style="{StaticResource TextBlockText}" Text="{Binding Shoulder}"></TextBlock>
+                </StackPanel>
+
+                <StackPanel  Grid.Column="1" Grid.Row="4" Margin="0,0,0,34">
+                    <StackPanel.Background>
+                        <SolidColorBrush Color="Gray" Opacity="0.8"></SolidColorBrush>
+                    </StackPanel.Background>
+                    <TextBlock Style="{StaticResource TextBlockHead}" >CHEST</TextBlock>
+                    <TextBlock Style="{StaticResource TextBlockText}" Text="{Binding  Chest.Name}"></TextBlock>
+                </StackPanel>
+
+                <StackPanel  Grid.Column="3" Grid.Row="4" Margin="0,40,0,0">
+                    <StackPanel.Background>
+                        <SolidColorBrush Color="Gray" Opacity="0.8"></SolidColorBrush>
+                    </StackPanel.Background>
+                    <TextBlock Style="{StaticResource TextBlockHead}" >BELT</TextBlock>
+                    <TextBlock Style="{StaticResource TextBlockText}" Text="{Binding  Belt.Name}" ></TextBlock>
+                </StackPanel>
+
+
+
+                <StackPanel  Grid.Column="3" Grid.Row="6" Margin="0,40,0,0">
+                    <StackPanel.Background>
+                        <SolidColorBrush Color="Gray" Opacity="0.8"></SolidColorBrush>
+                    </StackPanel.Background>
+                    <TextBlock Style="{StaticResource TextBlockHead}" >LEGS</TextBlock>
+                    <TextBlock Style="{StaticResource TextBlockText}" Text="{Binding  Legs.Name}"></TextBlock>
+                </StackPanel>
+
+                <StackPanel  Grid.Column="2" Grid.Row="7" Margin="0,40,0,0">
+                    <StackPanel.Background>
+                        <SolidColorBrush Color="Gray" Opacity="0.8"></SolidColorBrush>
+                    </StackPanel.Background>
+                    <TextBlock Style="{StaticResource TextBlockHead}" >SHOES</TextBlock>
+                    <TextBlock Style="{StaticResource TextBlockText}" Text="{Binding  Shoes.Name}" ></TextBlock>
+                </StackPanel>
+
+
+            </Grid>
+        </Border>
+
+        
+    --><!--Stats--><!--
+    
+        <Grid Height="100">
+
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="70" />
+                <ColumnDefinition Width="130" />
+                <ColumnDefinition />
+                <ColumnDefinition Width="100" />
+                <ColumnDefinition Width="100"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="10"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel DataContext="{Binding Main, Source={StaticResource Locator}}" Grid.Column="1" Grid.Row="1">
+
+                <TextBlock Style="{StaticResource TextBlockHead}" >Stats</TextBlock>
+                <TextBlock Style="{StaticResource TextBlockText}" >Strength: <TextBlock Style="{StaticResource TextBlockText}" Text="{Binding TotalStrength}"></TextBlock></TextBlock>
+                <TextBlock Style="{StaticResource TextBlockText}" >Intelligence: <TextBlock Style="{StaticResource TextBlockText}" Text="{Binding TotalIntelligence}"></TextBlock></TextBlock>
+                <TextBlock Style="{StaticResource TextBlockText}" >Agility: <TextBlock Style="{StaticResource TextBlockText}" Text="{Binding TotalAgility}"></TextBlock></TextBlock>
+
+            </StackPanel>
+
+            <StackPanel  Grid.Column="3" Grid.Row="1">
+
+                <TextBlock Style="{StaticResource TextBlockHead}" >Total Gold</TextBlock>
+                <TextBlock Style="{StaticResource TextBlockText}" DataContext="{Binding Main, Source={StaticResource Locator}}" Text="{Binding TotalGold}" ></TextBlock>
+            </StackPanel>
+
+        </Grid>
+
+
+        
+    --><!--Onderste knoppen--><!--
+    
+        <Grid DataContext="{Binding Main, Source={StaticResource Locator}}" Height="50" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="100" />
+                <ColumnDefinition Width="100" />
+                <ColumnDefinition Width="100" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Button Command="{Binding EmptyInventory}" Grid.Column="1" Background="DarkRed" FontSize="20" FontWeight="Bold" Foreground="White" >Legen</Button>
+            <Button Command="{Binding OpenShopCommand}" Grid.Column="2" Background="DarkRed" FontSize="20" FontWeight="Bold" Foreground="White" >Shop</Button>
+        </Grid>
+    </StackPanel>-->
+
+    
+    
+    <!--OUD-->
+
+
+</Window>
